@@ -25,10 +25,12 @@
   </head>
   <body>
 
-      <nav class="nav blue">
-          <div class="nav-wrapper">
-            <a href="index.html" class="left brand-logo">C-S & M</a>
-            <ul class="right hide-on-med-and-down">
+        <nav class="nav blue">
+        <div class="container">
+          <div class="nav-wraper">
+            <a href="index.html" class="brand-logo">S-C & M</a>
+            <a href="#" class="sidenav-trigger" data-target="movile-links"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
               <li><a href="index.html">Inicio</a></li>
               <li><a href="#PR">Presentación</a></li>
               <li><a href="jugadores.html">Nuestros jugadores</a></li>
@@ -37,7 +39,17 @@
 
             </ul>
           </div>
+        </div>
+
     </nav>
+
+    <ul class="sidenav" id="movile-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="#PR">Presentación</a></li>
+      <li><a href="jugadores.html">Nuestros jugadores</a></li>
+      <li><a href="noticias.html">Noticias</a></li>
+      <li><a href="#c">Contactos</a></li>
+    </ul>
 
 <div class="section"><br><br><br><br><br><br>
 
@@ -119,6 +131,7 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
 
      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
 
 
@@ -161,6 +174,9 @@ $(document).ready(function(){
     var elems = document.querySelectorAll('.parallax');
     var instances = M.Parallax.init(elems, options);
   });
+      $(document).ready(function(){
+  $('.sidenav').sidenav();
+});
 
 </script>
   </body>
